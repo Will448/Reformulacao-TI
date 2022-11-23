@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ucan</title>
+    <link href="../../global.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <div class='menu-container'>
+            <div class='ucan'>Ucan</div>
+            <nav id="nav-principal">
+                <ul>
+                    <li><a href='tarefas.html'>Tarefas</a></li>
+                    <li><a href='dicas.html'>Dicas de saúde</a></li>
+                    <li><a href='/logado/CalendarPickerJS-master/example.html'>Calendário</a></li>
+                    <li><a href='perfil.html'>Perfil</a></li>
+                    <li><a href='/index.html'>Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <button type="button" class="clear" onclick="logout()">
+            Sair
+        </button>
+
+        <div class='tarefas'>
+            <aside class='lateral'>
+                <h2>Minhas tarefas</h2>
+    
+                <nav>
+                    <ol id="transactions">
+    
+                    </ol>
+                </nav>
+            </aside>
+    
+            <div class='bemvindo'>
+                <h1>Bem vindo, @</h1>
+                <br>
+                <h2>Aprenda a criar hábitos positivos com tarefas simples</h2>
+    
+                <div class="concluido">
+                    <div class="tare">
+                        <h2> 00 Tarefas concluidas</h2>
+                    </div>
+                    <div class="tare">
+                        <h2> 04 Tarefas pendentes</h2>
+                    </div>
+                </div>
+            </div>
+    
+    <button class="fab fixed bottom right" onclick="newTransaction()">+</button>
+</body>
+
+<link rel="stylesheet" href="../../global.css">
+<link rel="stylesheet" href="home.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script src="../../bd/firebase-init.js"></script>
+<script src="../../bd/auth-guard.js"></script>
+<script src="../login/loading.js"></script>
+<script src="../../services/transaction.service.js"></script>
+<script src="home.js"></script>
+
+</html>
