@@ -1,5 +1,6 @@
 function logout() {
     firebase.auth().signOut().then(() => {
+        alert("foi sesa")
         window.location.href = "../../index.html";
     }).catch(() => {
         alert('Erro ao fazer logout');
