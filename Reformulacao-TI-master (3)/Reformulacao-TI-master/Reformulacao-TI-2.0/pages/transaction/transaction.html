@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ucan</title>
+    <link href="../../global.css" rel="stylesheet" type="text/css" />
+    <link href="./transaction.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class='menu-container'>
+            <div class='ucan'>UCAN</div>
+            <nav id="nav-principal">
+                <ul>
+                    <li><a href='../home/home.html'>Tarefas</a></li>
+                    <li><a href='../dicas/dicas.html'>Dicas de saúde</a></li>
+                    <li><a href='../calendario/example.html'>Calendário</a></li>
+                    <li><a href='../pomodoro/index.html'>Pomodoro</a></li>
+                    <li><a><button type="button" onclick="logout()" id="sai">Sair</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="calendario">
+        <form>
+          
+                <div><label>Evento</label></div>
+                <input type="radio" name="type" checked id="expense">
+                <label for="expense">Individual</label>
+                <input type="radio" name="type" id="income">
+                <label for="income">Coletivo</label>
+            
+          
+                <div><label>Data</label></div>
+                <input type="date" onchange="onChangeDate()" id="date">
+                <div class="error" id="date-required-error">
+                    Data é obrigatória/inválida
+                </div>
+                
+            
+                <div><label>Horário</label></div>
+                <input type="time" onchange="onChangeTime()" id="time">
+                <div class="error" id="date-required-error">
+                    Data é obrigatória/inválida
+                </div>
+                
+          
+                <div><label>Tipo de evento</label></div>
+                <select id="currency">
+                    <option value="USD">Familiar</option>
+                    <option value="EUR">Negócios</option>
+                    <option value="BRL" selected>Lazer</option>
+                </select>
+           
+            
+            
+                
+                <div class="error" id="transaction-type-required-error">
+                    Tipo é obrigatória
+                </div>
+            
+            
+                <div><label>Descriçao</label></div>
+                <input type="text" id="description">
+            
+            <button type="button" class="solid" disabled id="save-button"
+                onclick="saveTransaction()">
+                Salvar
+            </button>
+            <br>
+            <br>
+            <a href="../home/home.html">
+            <button type="button" class="solid" id="boot">Cancelar</button>
+            </a>
+    
+        </form>
+    </div>
+</body>
+
+<link rel="stylesheet" href="../../style.css">
+
+<link rel="stylesheet" href="transaction.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script src="../../bd/firebase-init.js"></script>
+<script src="../../bd/auth-guard.js"></script>
+<script src="../login/loading.js"></script>
+<script src="../../services/transaction.service.js"></script>
+<script src="transaction.js"></script>
+
+
+</html>
