@@ -104,11 +104,9 @@ input[type=date], input[type=time], input[type=text] {
   }
   
   .calendario form{
-    width: 300px;
     background-color:#CFE5FC;
     border-radius: 15px;
-    height: 450px;
-    width: 240px;
+    width: 30%;
     padding: 40px;
     margin-right: 10%;
   }
