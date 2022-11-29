@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    font-family: "Kodchasan", serif;
+}
+
+ol {
+     width: 900px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;      /* Adicione isso */
+    list-style-type: none;
+    margin: 1em 1em 1em 1em;
+  
+    
+}
+ol li {
+    cursor: pointer;
+    background: white;
+    padding: 1em 1em 1em 1em;
+    border-bottom: 1px solid gray;
+}
+ol li:hover {
+    opacity: 0.8;
+}
+ol li.expense {
+    border-left: 10px solid red;
+}
+ol li.income {
+    border-left: 10px solid green;
+}
+ol li:hover button.danger {
+    display: block;
+}
+
+button.danger {
+    width: auto;
+    float: right;
+    display: none;
+}
+
+p {
+    margin: 4px 0;
+}
+
+#bem{
+    width: 30%;
+    font-size: 30px;
+justify-content: center;
+align-self: center;
+margin-left: 35%;}
