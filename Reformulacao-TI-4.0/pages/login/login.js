@@ -60,7 +60,7 @@ function recoverPassword() {
 
 function getErrorMessage(error) {
     if (error.code == "auth/user-not-found") {
-        return "Usuário nao encontrado";
+        return swal("Oi", "Seu usuário não foi encontrado", "danger");
     }
     if (error.code == "auth/wrong-password") {
         return "Senha inválida";

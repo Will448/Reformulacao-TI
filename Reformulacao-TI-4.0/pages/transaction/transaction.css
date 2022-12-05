@@ -8,15 +8,57 @@ body{
     background-color: aliceblue;
 }
 #boot{
-    background-color: #1F96DB;
+      width: 100%;
+      background: #1F96DB;
+      color:#000000;
+      
+      display: inline-block;
+      
+      border-radius: 4px;
+      box-sizing: border-box;
+  
     
 }
 #save-button{
-    background-color: #1F96DB;
-    
-
+  color: #000000;
+  width: 100%;
+  background: #1F96DB;
+  
+ 
+  display: inline-block;
+  
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
+.menu-container button{
+  padding: 0px 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#income,
+#expense{
+  display:flex;
+  width: auto;
+}
+
+input[type=radio]{
+  display:flex;
+  width: auto;
+}
 
 input,
 button,
@@ -98,4 +140,14 @@ button.fab.right {
   align-self: center;
   justify-content: center;
   margin-top:  2%;
+}
+
+#sai{
+    font-family: "Kodchasan", serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000; 
+    background-color: #cecaf7;
+    border-width: 0px;
+    width: auto;
 }

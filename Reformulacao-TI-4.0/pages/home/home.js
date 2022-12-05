@@ -37,7 +37,7 @@ function findTransactions(user) {
         .catch(error => {
             hideLoading();
             console.log(error);
-            alert('Erro ao recuperar transacoes');
+            alert('Tem certeza dessa ação?');
         })
 }
 
@@ -87,7 +87,7 @@ function addTransactionsToScreen(transactions) {
     });
 }
 function askRemoveTransaction(transaction) {
-    const shouldRemove = confirm('Deseja remover a transaçao?');
+    const shouldRemove = confirm('Deseja remover a tarefa');
     if (shouldRemove) {
         removeTransaction(transaction);
     }
@@ -107,7 +107,7 @@ function removeTransaction(transaction) {
         .catch(error => {
             hideLoading();
             console.log(error);
-            alert('Erro ao remover transaçao');
+            alert('Tarefa removida');
         })
 }
 
@@ -127,5 +127,4 @@ function getUser(user) {
      document.getElementById('usuario').innerHTML = newstr;
     
 }
-
 

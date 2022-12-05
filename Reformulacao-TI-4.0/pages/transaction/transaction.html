@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Ucan</title>
-    <link href="../../global.css" rel="stylesheet" type="text/css" />
+    
     <link href="../calendario/calendario.css" rel="stylesheet" type="text/css" />
     <link href="./transaction.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +90,6 @@
                 <ul>
                     <li><a href='../home/home.html'>Tarefas</a></li>
                     <li><a href='../dicas/dicas.html'>Dicas de saúde</a></li>
-                    <li><a href='../calendario/example.html'>Calendário</a></li>
                     <li><a href='../pomodoro/index.html'>Pomodoro</a></li>
                     <li><a><button type="button" onclick="logout()" id="sai">Sair</button></a></li>
                 </ul>
@@ -101,11 +100,11 @@
         <form>
             <form>
           
-                <div><label>Evento</label></div>
-                <input type="radio" name="type" checked id="expense">
-                <label for="expense">Individual</label>
-                <input type="radio" name="type" id="income">
-                <label for="income">Coletivo</label>
+                <div><label>O evento é</label></div>
+                
+                <label for="expense">Individual</label><input type="radio" name="type" checked id="expense">
+                
+                <label for="income">Coletivo</label><input type="radio" name="type" id="income">
             
           
                 <div><label>Data</label></div>
@@ -118,7 +117,7 @@
                 <div><label>Horário</label></div>
                 <input type="time" onchange="onChangeTime()" id="time">
                 <div class="error" id="date-required-error">
-                    Data é obrigatória/inválida
+                    Horário é obrigatório/inválido
                 </div>
                 
           
@@ -130,7 +129,7 @@
                     <option value="Escolar" selected>Escolar</option>
                 </select>
            
-                <div><label>Tipo de transaçao *</label></div>
+                <div><label>Urgencia *</label></div>
                 <select onchange="onChangeTransactionType()" id="transaction-type">
                     <option value=""> Selecione a prioridade do evento</option>
                     <option>Urgente</option>
@@ -139,7 +138,7 @@
                     <option>Pouco urgente</option>
                 </select>
                 <div class="error" id="transaction-type-required-error">
-                    Tipo de transacao é obrigatória
+                    Urgencia é obrigatória
                 </div>
             
                 
@@ -153,7 +152,7 @@
                 <div class="error" id="value-less-or-equal-to-zero-error">
                     Valor deve ser maior que zero
                 </div>
-                <div><label>Descriçao</label></div>
+                <div><label>Descrição</label></div>
                 <input type="text" id="description">
             
             <button type="button" class="solid" disabled id="save-button"
@@ -190,7 +189,7 @@
 
 
 <script src="../calendario/CalendarPicker.js"></script>
-
+<script src="../home/home.js"></script>
 
 <script>
     const nextYear = new Date().getFullYear() + 1;
@@ -219,4 +218,5 @@
         console.log(`The current value of the calendar is: ${currentValue}`);
     });
 </script>
+
 </html>

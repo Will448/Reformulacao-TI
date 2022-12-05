@@ -1,8 +1,9 @@
 firebase.auth().onAuthStateChanged(user => {
     if (!user) {
-        swal("Good job!", "You clicked the button!", "success");
-        window.location.href = "../../index.html";
-        
+        setTimeout(() => {
+            swal("Até mais!", "Você deslogou com sucesso!", "success");
+            window.location.href = "../../index.html";
+          }, 3000)  
 
     }
 })

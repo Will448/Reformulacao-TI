@@ -5,6 +5,7 @@
     font-family: "Kodchasan", serif;
 }
 
+
 .main {
     box-sizing: border-box;
     display: flex;
@@ -18,7 +19,6 @@
 a {
     color: #000000;
     text-decoration: none;
-    
 }
 
 /*Header*/
@@ -28,6 +28,7 @@ a {
     text-decoration: none;
     margin-left: 20px;
     margin-right: 20px;
+    align-self: center;
 }
 
 .menu-container {
@@ -42,6 +43,7 @@ a {
     text-decoration: none;
     padding-right:3%;
     padding-left:2%;
+    
 }
 
 #sai{
@@ -95,7 +97,9 @@ form {
 
 input[type=text],
 input[type=email],
-input[type=password] {
+input[type=password],
+input[type=numbe],
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -126,21 +130,19 @@ main{
 
 img{
     display: flex;
-    width: 50%;
+    width: 70%;
 }
 .imagem {
     display:flex;
     margin-top: 8%;
     width: 50%;
-    margin-left: 8%;
     align-self: center;
     padding-left: 10%;
 }
 /*PG*/ 
 .crie {
-    width: 50%;
+    width: 70%;
     margin-right: 5%;
-    margin-top: 3%;
     
 }
 
@@ -176,11 +178,6 @@ a {
     border-radius: 5px;
 }
 
-a:hover {
-    color: #87c5e8;
-    text-decoration: none;
-}
-
 
 p {
     margin-top: 30px;
@@ -195,7 +192,9 @@ p {
 .photo-grid-container {
     display: flex;
     justify-content: space-around;
-    background-color: lightblue;
+    background-color: rgba(233, 215, 255, 0.452);
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   
 
@@ -367,8 +366,8 @@ button.fab.right {
     border-radius: 10px;
 }
 .outline.danger {
-    color: red;
-    border-color: red;
+    color: rgb(255, 255, 255);
+    border-color: rgba(255, 0, 0, 0.658);
 }
 
 .error {
